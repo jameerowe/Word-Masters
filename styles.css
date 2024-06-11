@@ -39,9 +39,62 @@ h1 {
 .letter-box {
     height: 50px;
     width: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
     border: solid 3px lightgray;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+}
+
+.correct {
+    background-color: darkgreen;
+    color: white;
+}
+
+.close {
+    background-color: goldenrod;
+    color: white;
+}
+
+.wrong {
+    background-color: #888;
+    color: white;
+}
+
+.invalid {
+    animation: flash 1s;
+}
+
+@keyframes flash {
+    5% {
+        border-color: crimson;
+    }
+
+    100% {
+        border-color: #ccc;
+    }
+}
+
+.spiral {
+    font-size: 40px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.info-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
